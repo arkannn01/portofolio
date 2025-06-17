@@ -1,0 +1,134 @@
+.containercomment {
+    background-color: #fff;
+    box-shadow: #808080;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.headcomment {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.headcomment h1 {
+    font-family: Arial, sans-serif;
+    font-size: 1.5em;
+}
+
+.text {
+    margin: 10px 0;
+    font-family: sans-serif;
+    font-size: 0.9em;
+}
+
+.commentbox {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.commentbox>img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: contain;
+    object-position: calc(50% - 10px) center;
+}
+
+.content {
+    width: 100%;
+}
+
+.user {
+    border: none;
+    outline: none;
+    margin: 5px;
+    color: #808080;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.commentinput>input {
+    border: none;
+    padding: 10px;
+    padding-left: 0;
+    outline: none;
+    border-bottom: 2px solid blue;
+    margin-bottom: 10px;
+    width: 95%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #808080
+}
+
+.buttons button {
+    padding: 5px 10px;
+    background: lightgrey;
+    font-family: monospace;
+    color: #808080;
+    text-transform: unset;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.buttons button.abled {
+    background: blue;
+    color: #fff;
+}
+
+.policy {
+    margin: 20px 0;
+    font-size: 0.8em;
+    font-family: Arial, sans-serif;
+    color: #808080;
+}
+
+.policy a {
+    color: blue;
+    text-decoration: none;
+}
+
+.notify {
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.notify>input {
+    margin-right: 5px;
+}
+
+.parents {
+    font-family: Arial, sans-serif;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.parents h1 {
+    font-size: 0.9em;
+}
+
+.parents p {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.parents>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.date {
+    color: #808080;
+    font-size: 0.8em;
+}
