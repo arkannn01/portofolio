@@ -554,147 +554,75 @@
                 </div>
             </div>
 
-            <div class="col-lg-12 d-flex align-items-center">
+            </div>
+            <div class="col-lg-12 align-items-center">
                 <div class="containercomment">
-                    <div class="headcomment">
-                        <h1> Post a Comment</h1>
-                    </div>
-                    <div><span id="comment">0</span> Comments</div>
-                    <div class="text">
-                        <p>I am happy to hear from you</p>
-                    </div>
-                    <div class="comments"></div>
-                    <div class="commentbox">
-                        <img src="assets/img/user1.png" alt="">
-                        <div class="content">
-                            <h2>Comment as: </h2>
-                            <input type="text" value="Anonymous" class="user">
-
-                            <div class="commentinput">
-                                <input type="text" placeholder="Enter comment" class="usercomment">
-                                <div class="buttons">
-                                    <button type="submit" disabled id="publish">Publish</button>
-                                    <div class="notify">
-                                        <input type="checkbox" class="notifyinpit"> <span>Notify me</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <p class="policy">This site is protected by reCAPTCHA and the Google <a href="">privacy policy </a>and<a href=""> Terms of Service</a> apply.</p>
-                        </div>
-                    </div>
+                    <div id="disqus_thread"></div>
+                    <script>
+                        /**
+                         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                            var d = document,
+                                s = d.createElement('script');
+                            s.src = 'https://belajar-14.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
                 </div>
-            </div>
-            <script>
-                "use strict";
 
-                const userId = {
-                    name: null,
-                    identity: null,
-                    image: null,
-                    message: null,
-                    date: null,
-                }
-
-                const userComment = document.querySelector(".usercomment");
-                const publishBtn = document.querySelector("#publish");
-                const comments = document.querySelector(".comments");
-                const username = document.querySelector(".user");
-
-                userComment.addEventListener("input", e => {
-                    if (!userComment.value) {
-                        publishBtn.setAttribute("disabled", "disabled");
-                        publishBtn.classList.remove("abled")
-                    } else {
-                        publishBtn.removeAttribute("disabled");
-                        publishBtn.classList.add("abled");
-
-                    }
-                })
+                </footer>
 
 
 
+                <!-- Scroll Top -->
+                <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-                function addpost() {
-                    console.log(username.value);
-                    if (!userComment.value) return;
-                    userId.name = username.value;
-                    if (userId.name === "Anonymous") {
-                        userId.identity = false;
-                        userId.image = "assets/img/user1.png";
-                    } else {
-                        userId.identity = true;
-                        userId.image = "assets/img/user1.png";
-                    }
+                <!-- Preloader -->
+                <div id="preloader"></div>
 
-                    userId.message = userComment.value;
-                    userId.date = new Date().toLocaleDateString();
-                    let published =
-                        `<div class="parents">
-                <img src="${userId.image}">
-                <div>
-                  <h1>${userId.name}</h1>
-                  <p>${userId.message}</p>
-                  <span class="date">${userId.date}</span>           
-                </div>
-                </div>`;
+                <!-- Vendor JS Files -->
+                <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+                <script src="assets/vendor/php-email-form/validate.js"></script>
+                <script src="assets/vendor/aos/aos.js"></script>
+                <script src="assets/vendor/typed.js/typed.umd.js"></script>
+                <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+                <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+                <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+                <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+                <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+                <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-                    comments.innerHTML += published;
-                    userComment.value = "";
-
-                    let commentsNum = document.querySelectorAll(".parents").length;
-                    document.getElementById("comment").textContent = commentsNum;
-
-                }
-
-                publishBtn.addEventListener("click", addpost)
-            </script>
-
-        </section>
-        <!-- /Contact Section -->
-
-    </main>
-    <footer id="footer" class="footer light-background">
-
-        <div class="container">
-            <div class="copyright text-center ">
-                <span>made by</span> <strong class="px-1 sitename">Arkan</strong><span>with love<br></span></p>
-            </div>
-            <div class="social-links col text-center">
-                <a href="https://wa.me/6282267815973"><i class="bi bi-whatsapp"></i></a>
-                <a href="https://www.instagram.com/arknn.alls?igsh=NGZrZGZxMHJhNXhi"><i class="bi bi-instagram"></i></a>
-                <a href="https://open.spotify.com/user/31cb3i76yptmrybkzpkxtxa5sa4i?si=P-C4pjPTTuubi6KXmWJ5cQ"><i class="bi bi-spotify"></i></a>
-                <a href="https://www.tiktok.com/@kanannforever?_t=ZS-8x6WBcB1Sev&_r=1"><i class="bi bi-tiktok"></i></a>
-            </div>
-
-        </div>
-        </div>
-
-    </footer>
-
-
-
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+                <!-- Main JS File -->
+                <script src="assets/js/main.js"></script>
 
 </body>
+
+<!-- Footer -->
+<footer class="footer bg-white text-dark py-4 mt-5">
+    <div class="container text-center">
+        <div class="mb-3">
+            <a href="https://wa.me/6282267815973" class="mx-2 text-dark"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/arknn.alls?igsh=NGZrZGZxMHJhNXhi" class="mx-2 text-dark"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.tiktok.com/@kanannforever?_t=ZS-8x6WBcB1Sev&_r=1" class="mx-2 text-dark"><i class="bi bi-tiktok"></i></a>
+            <a href="https://open.spotify.com/user/31cb3i76yptmrybkzpkxtxa5sa4i?si=P-C4pjPTTuubi6KXmWJ5cQ" class="mx-2 text-dark"><i class="bi bi-spotify"></i></a>
+        </div>
+        <div>
+            &copy; 2025 <strong>Arkan Alfayyad S.</strong> | All Rights Reserved.
+        </div>
+        <div>
+            <small>Made with ❤️ using Bootstrap</small>
+        </div>
+    </div>
+</footer>
 
 
 </html>
